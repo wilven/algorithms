@@ -1,0 +1,30 @@
+class Person:
+    def __init__ (self,name,isMale):
+        self.name=name
+        if (isMale==True):
+            self.sex="Male"
+        else:
+            self.sex="Female"
+    def show(self):
+        print("%s is %s "%(self.name,self.sex))
+
+ListofPerson=[]
+ListofPerson.append(Person("alice",False))
+ListofPerson.append(Person("bob",True))
+ListofPerson.append(Person("carol",False))
+ListofMale=[]
+ListofFemale=[]
+for person in ListofPerson:
+    if(person.sex=="Male"):
+        ListofMale.append(person)
+    else:
+        ListofFemale.append(person)
+print("")
+print("Male")
+for person in ListofMale:
+    person.show()
+
+print("")
+print("Female")
+for person in ListofFemale:
+    person.show()
